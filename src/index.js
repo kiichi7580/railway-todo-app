@@ -5,16 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CookiesProvider } from "react-cookie";
 import { Provider } from "react-redux";
-import { store } from "./store"
+import { store } from "./store";
 
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 root.render(
-    <Provider store={store}>
-      <CookiesProvider>
-        <App />
-      </CookiesProvider>
-    </Provider>
+  <Provider store={store}>
+    <CookiesProvider>
+      <App />
+    </CookiesProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
