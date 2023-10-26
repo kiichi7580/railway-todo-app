@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { Header } from "../components/Header";
 import { url } from "../const";
-import "./home.css";
-// import { PropTypes } from 'prop-types';
+import "./home.scss";
+import { PropTypes } from "prop-types";
 
 export const Home = () => {
   const [isDoneDisplay, setIsDoneDisplay] = useState("todo"); // todo->未完了 done->完了
@@ -156,4 +156,11 @@ const Tasks = (props) => {
         ))}
     </ul>
   );
+};
+
+//型チェック
+Tasks.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  selectListId: PropTypes.string,
+  isDoneDisplay: PropTypes.string.isRequired,
 };

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Navigate, useNavigate, Link } from "react-router-dom";
 import { Header } from "../components/Header";
-import "./signin.css";
+import "./signin.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useCookies } from "react-cookie";
 import { signIn } from "../authSlice";
@@ -15,7 +15,7 @@ export const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
-  const [setCookie] = useCookies();
+  const [, setCookie] = useCookies();
   //元は→const [cookies, setCookie, removeCookie] = useCookies()
   //エラーが出るから消してみた
   const handleEmailChange = (e) => setEmail(e.target.value);

@@ -2,7 +2,8 @@ module.exports = {
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest/globals": true,
     },
     "extends": [
         "eslint:recommended",
@@ -27,10 +28,13 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jest",
     ],
     "rules": {
-        "@typescript-eslint/no-implicit-any": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-    },
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
 }
+        // "@typescript-eslint/no-implicit-any": "off",
+        // "@typescript-eslint/explicit-module-boundary-types": "off",
+    }
